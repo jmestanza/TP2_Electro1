@@ -91,6 +91,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 
 \end_layout
 
@@ -297,6 +298,200 @@ frac{I_D}{(VGS-VTH)^2} = 22
 \backslash
 frac{mA}{V}$$
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Siguiendo con el análisis de continua:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+V
+\begin_inset Formula $_{TH}$
+\end_inset
+
+=1V
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $\alpha$
+\end_inset
+
+=22
+\begin_inset Formula $\frac{mA}{V}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Como la malla de entrada es la misma 
+\begin_inset Formula $I_{1}=I_{2}=I$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Con la ecuación 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+V_{GS3}=V_{CC}-2I.R_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Y con 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+2I=\frac{\mu_{n}C_{ox}}{2}\frac{W}{L}(V_{GS3}-V_{TH})^{2}=\alpha(V_{GS3}-V_{TH})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+0=-4I^{2}R_{2}^{2}-(4(V_{CC}-V_{TH})R_{2}+\frac{2}{\alpha})+(V_{CC}-V_{TH})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Una vez que se obtuvo I se tiene V
+\begin_inset Formula $_{GS3}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+V_{GS2}+V_{DS3}+2I.R_{2}-V_{CC}=0
+\]
+
+\end_inset
+
+Análogamente con el valor de I se obtiene V
+\begin_inset Formula $_{GS2}$
+\end_inset
+
+ y con ella se obtienen V
+\begin_inset Formula $_{DS3}$
+\end_inset
+
+, V
+\begin_inset Formula $_{DS1}$
+\end_inset
+
+ y V
+\begin_inset Formula $_{DS2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\sqrt{\frac{I}{\alpha}}=|V_{GS2}-V_{TH}|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+V_{DS1}=2V_{CC}+V_{DS3}+2I.R_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+V_{DS2}=2V_{CC}+I.R1+2I.R_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+V_{GS4}=V_{CC}+I.R_{1}+I_{4}(R_{3}//R_{L})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+I_{4}=\alpha(V_{GS4}-V_{TH})^{2}
+\]
 
 \end_inset
 
@@ -679,6 +874,11 @@ $R_{I}$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Tomando la corriente calculada en el punto anterior, se calcula la impedancia
+ de entrada:
 \end_layout
 
 \begin_layout Standard
