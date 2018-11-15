@@ -5,6 +5,16 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\pagestyle{fancy}
+\lhead{Electrónica I 22.59}
+\chead{TPL2}
+\rhead{ITBA}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish
@@ -92,7 +102,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-dfghgf
+\begin_inset Graphics
+	filename circuito.png
+	display false
+	scale 80
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -179,7 +196,7 @@ status open
 
 \begin_layout Plain Layout
 
-$I_D = 
+$$I_D = 
 \backslash
 frac{1}{2} 
 \backslash
@@ -189,7 +206,7 @@ cdot
 \backslash
 frac{W}{L} 
 \backslash
-cdot (VGS-VTH)^2$
+cdot (VGS-VTH)^2$$
 \end_layout
 
 \end_inset
@@ -297,6 +314,10 @@ frac{mA}{V}$$
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
@@ -488,6 +509,75 @@ V_{GS4}=V_{CC}+I.R_{1}+I_{4}(R_{3}//R_{L})
 \[
 I_{4}=\alpha(V_{GS4}-V_{TH})^{2}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Circuito incremental
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename incremental.png
+	display false
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Circuito incremental
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
 
 \end_inset
 
