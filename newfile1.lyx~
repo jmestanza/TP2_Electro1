@@ -318,18 +318,6 @@ frac{mA}{V}$$
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-newpage
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
@@ -493,7 +481,7 @@ V_{DS1}=2V_{CC}+V_{DS3}+2I.R_{2}
 \lang english
 \begin_inset Formula 
 \[
-V_{DS2}=2V_{CC}+I.R1+2I.R_{2}
+V_{DS2}=2V_{CC}-I.R1-2I.R_{2}+V_{DS3}
 \]
 
 \end_inset
@@ -506,7 +494,7 @@ V_{DS2}=2V_{CC}+I.R1+2I.R_{2}
 \lang english
 \begin_inset Formula 
 \[
-V_{GS4}=V_{CC}+I.R_{1}+I_{4}(R_{3}//R_{L})
+V_{GS4}=V_{CC}-I.R_{1}-I_{4}(R_{3}//R_{L})
 \]
 
 \end_inset
