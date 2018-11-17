@@ -319,22 +319,16 @@ frac{mA}{V}$$
 
 \begin_layout Standard
 
-\end_layout
-
-\begin_layout Standard
-
 \lang english
 Siguiendo con el análisis de continua:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-V
+En la datasheet se informa de un rango de V
 \begin_inset Formula $_{TH}$
 \end_inset
 
-=1V
+ de 0.8V a 3V.
 \end_layout
 
 \begin_layout Standard
@@ -357,7 +351,11 @@ Como la malla de entrada es la misma
 \begin_inset Formula $I_{1}=I_{2}=I$
 \end_inset
 
- 
+ y por ende I
+\begin_inset Formula $_{3}=2I$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -390,7 +388,7 @@ Y con
 \lang english
 \begin_inset Formula 
 \[
-2I=\frac{\mu_{n}C_{ox}}{2}\frac{W}{L}(V_{GS3}-V_{TH})^{2}=\alpha(V_{GS3}-V_{TH})^{2}
+I_{3}=2I=\frac{\mu_{n}C_{ox}}{2}\frac{W}{L}(V_{GS3}-V_{TH})^{2}=\alpha(V_{GS3}-V_{TH})^{2}
 \]
 
 \end_inset
@@ -403,7 +401,7 @@ Y con
 \lang english
 \begin_inset Formula 
 \[
-0=-4I^{2}R_{2}^{2}-(4(V_{CC}-V_{TH})R_{2}+\frac{2}{\alpha})+(V_{CC}-V_{TH})^{2}
+0=-4I^{2}R_{2}^{2}-(4(V_{CC}-V_{TH})R_{2}+\frac{2}{\alpha}))I+(V_{CC}-V_{TH})^{2}
 \]
 
 \end_inset
@@ -414,11 +412,56 @@ Y con
 \begin_layout Standard
 
 \lang english
-Una vez que se obtuvo I se tiene V
+\begin_inset Formula 
+\[
+I=\frac{2R_{2}V_{CC}\alpha-2R_{2}V_{TH}\alpha+1\pm\sqrt{4R_{2}V_{CC}\alpha-4R_{2}V_{TH}\alpha+1}}{4R_{2}^{2}\alpha}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para poder realizar las cuentas se procede a comparar numéricamente con
+ las mediciones, dado que no se puede predecir a priori el valor de V
+\begin_inset Formula $_{TH}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sabemos que con I se puede calcular V
 \begin_inset Formula $_{GS3}$
 \end_inset
 
- 
+ y dado que se tienen dos valores, descartar uno de los dos mediante la
+ ecuación V
+\begin_inset Formula $_{DS}$
+\end_inset
+
+>V
+\begin_inset Formula $_{GS}-V_{TH}$
+\end_inset
+
+, podemos notar que siempre el que de mayor V
+\begin_inset Formula $_{GS}-V_{TH}$
+\end_inset
+
+ va a ser el correcto.
+ Sabiendo esto, se obtienen los valores.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V_{TH}=1.86V
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -426,28 +469,54 @@ Una vez que se obtuvo I se tiene V
 \lang english
 \begin_inset Formula 
 \[
-V_{GS2}+V_{DS3}+2I.R_{2}-V_{CC}=0
+I=0.496mA
 \]
 
 \end_inset
 
-Análogamente con el valor de I se obtiene V
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+V_{GS3}=2.07V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora que se obtuvo V
+\begin_inset Formula $_{GS3}$
+\end_inset
+
+ se puede obtener facilmente V
 \begin_inset Formula $_{GS2}$
 \end_inset
 
- y con ella se obtienen V
-\begin_inset Formula $_{DS3}$
+
+\end_layout
+
+\begin_layout Standard
+Para esta instancia utilizamos el V
+\begin_inset Formula $_{TH}$
 \end_inset
 
-, V
-\begin_inset Formula $_{DS1}$
+ anterior y revisamos cuánto se desvía de lo medido, en caso de ser necesario
+ se ha de tener que probar con otro V
+\begin_inset Formula $_{TH}$
 \end_inset
 
- y V
-\begin_inset Formula $_{DS2}$
+ ya que, si bien sabemos que los transistores son distintos, puede que V
+\begin_inset Formula $_{TH}$
 \end_inset
 
-
+ sea parecido.
 \end_layout
 
 \begin_layout Standard
@@ -468,7 +537,7 @@ Análogamente con el valor de I se obtiene V
 \lang english
 \begin_inset Formula 
 \[
-V_{DS1}=2V_{CC}+V_{DS3}+2I.R_{2}
+0.15=|V_{GS2}-V_{TH}|
 \]
 
 \end_inset
@@ -481,7 +550,22 @@ V_{DS1}=2V_{CC}+V_{DS3}+2I.R_{2}
 \lang english
 \begin_inset Formula 
 \[
-V_{DS2}=2V_{CC}+I.R1+2I.R_{2}
+V_{GS2}-V_{TH}=\pm0.15
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por la misma razón de antes elegimos la que da +0.15, luego:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V_{GS2}=2.01V
 \]
 
 \end_inset
@@ -494,7 +578,65 @@ V_{DS2}=2V_{CC}+I.R1+2I.R_{2}
 \lang english
 \begin_inset Formula 
 \[
-V_{GS4}=V_{CC}+I.R_{1}+I_{4}(R_{3}//R_{L})
+V_{DS3}=V_{CC}-2I.R_{2}-V_{GS2}=0.07V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+V_{DS1}=2V_{CC}-V_{DS3}-2I.R_{2}=14.07V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+V_{DS2}=2V_{CC}-I.R1-2I.R_{2}-V_{DS3}=10.637V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Análogamente con las siguientes ecuaciones
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+V_{GS4}=V_{CC}-I.R_{1}-I_{4}(R_{3}//R_{L})\approx V_{A}-I_{4}R_{L}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+V_{A}=V_{CC}-I.R_{1}=8.627V
 \]
 
 \end_inset
@@ -508,6 +650,74 @@ V_{GS4}=V_{CC}+I.R_{1}+I_{4}(R_{3}//R_{L})
 \begin_inset Formula 
 \[
 I_{4}=\alpha(V_{GS4}-V_{TH})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se obtiene que I
+\begin_inset Formula $_{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+I_{4}=\frac{4400V_{A}\alpha(V_{A}-V_{TH})\pm\sqrt{(8800\alpha(V_{A}-V_{TH})+1}}{9680000\alpha})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Como en este caso con el V
+\begin_inset Formula $_{TH}$
+\end_inset
+
+ que acarreabamos daba muy distinto se procede a averiguar cuánto es el
+ V
+\begin_inset Formula $_{TH}$
+\end_inset
+
+ del transistor Q4.
+\end_layout
+
+\begin_layout Standard
+El valor que se correspondía con las mediciones es V
+\begin_inset Formula $_{TH4}$
+\end_inset
+
+=0.96V
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V_{GS4}=1.3478V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{4}=3.3mA
 \]
 
 \end_inset
