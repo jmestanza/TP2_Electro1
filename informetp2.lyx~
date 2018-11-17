@@ -87,7 +87,7 @@
 \begin_body
 
 \begin_layout Section
-Circuito
+Circuito utilizado
 \end_layout
 
 \begin_layout Standard
@@ -103,9 +103,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename circuito.png
+	filename Graficos/Esquematico.png
 	display false
-	scale 80
+	scale 60
 
 \end_inset
 
@@ -150,6 +150,117 @@ Omega$
 \end_inset
 
 , por lo que la señal de salida estará montada sobre una continua.
+ Considerando como entradas al par diferencial 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_1-Q_2$
+\end_layout
+
+\end_inset
+
+ tensiones 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{S1}$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{S2}$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_O = A_{VD}(V_{S1}-V_{S2}) + A_{VC}
+\backslash
+left(
+\backslash
+frac{V_{S1}+V_{S2}}{2}
+\backslash
+right)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que se utiliza una sola de las entradas, en este caso 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{S1}$
+\end_layout
+
+\end_inset
+
+ (correspondiente a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_S$
+\end_layout
+
+\end_inset
+
+), la otra se conecta a GND, de manera tal que la tensión de salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_O$
+\end_layout
+
+\end_inset
+
+ resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_O = A_{VD}V_{S1} + A_{VC}
+\backslash
+frac{V_{S1}}{2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Polarización
 \end_layout
 
 \begin_layout Standard
@@ -163,7 +274,7 @@ status open
 
 \begin_layout Plain Layout
 
-$VGS>VTH$
+$V_{GS}>V_{TH}$
 \end_layout
 
 \end_inset
@@ -178,7 +289,7 @@ status open
 
 \begin_layout Plain Layout
 
-$VDS>VGS-VTH$
+$V_{DS}>V_{GS}-V_{TH}$
 \end_layout
 
 \end_inset
@@ -206,7 +317,7 @@ cdot
 \backslash
 frac{W}{L} 
 \backslash
-cdot (VGS-VTH)^2$$
+cdot (V_{GS}-V_{TH})^2$$
 \end_layout
 
 \end_inset
@@ -244,7 +355,7 @@ status open
 
 \begin_layout Plain Layout
 
-$I_D(VDS)$
+$I_D(V_{DS})$
 \end_layout
 
 \end_inset
@@ -255,7 +366,7 @@ status open
 
 \begin_layout Plain Layout
 
-$VGS$
+$V_{GS}$
 \end_layout
 
 \end_inset
@@ -278,7 +389,7 @@ status open
 
 \begin_layout Plain Layout
 
-$VGS = 7V$
+$V_{GS} = 7V$
 \end_layout
 
 \end_inset
@@ -289,7 +400,7 @@ status open
 
 \begin_layout Plain Layout
 
-$VTH = 1V$
+$V_{TH} = 1V$
 \end_layout
 
 \end_inset
@@ -307,7 +418,7 @@ $$
 \backslash
 alpha = 
 \backslash
-frac{I_D}{(VGS-VTH)^2} = 22
+frac{I_D}{(V_{GS}-V_{TH})^2} = 22
 \backslash
 frac{mA}{V}$$
 \end_layout
@@ -318,55 +429,39 @@ frac{mA}{V}$$
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Siguiendo con el análisis de continua:
 \end_layout
 
 \begin_layout Standard
-En la datasheet se informa de un rango de V
-\begin_inset Formula $_{TH}$
-\end_inset
+En la datasheet de OnSemiconductor se informa del rango de la tensión de
+ threshold 
+\begin_inset ERT
+status open
 
- de 0.8V a 3V.
+\begin_layout Plain Layout
+
+$V_{TH}$
 \end_layout
 
-\begin_layout Standard
-
-\lang english
-\begin_inset Formula $\alpha$
 \end_inset
 
-=22
-\begin_inset Formula $\frac{mA}{V}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-Como la malla de entrada es la misma 
+, donde el mínimo es 0.8V y el máximo es 3V.
+ Como la malla de entrada es la misma, resulta 
 \begin_inset Formula $I_{1}=I_{2}=I$
 \end_inset
 
- y por ende I
-\begin_inset Formula $_{3}=2I$
+, y por ende 
+\begin_inset Formula $I_{3}=2I$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Con la ecuación 
+Con la ecuación:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 V_{GS3}=V_{CC}-2I.R_{2}
@@ -378,14 +473,10 @@ V_{GS3}=V_{CC}-2I.R_{2}
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Y con 
+Y con:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 I_{3}=2I=\frac{\mu_{n}C_{ox}}{2}\frac{W}{L}(V_{GS3}-V_{TH})^{2}=\alpha(V_{GS3}-V_{TH})^{2}
@@ -397,8 +488,6 @@ I_{3}=2I=\frac{\mu_{n}C_{ox}}{2}\frac{W}{L}(V_{GS3}-V_{TH})^{2}=\alpha(V_{GS3}-V
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 0=-4I^{2}R_{2}^{2}-(4(V_{CC}-V_{TH})R_{2}+\frac{2}{\alpha}))I+(V_{CC}-V_{TH})^{2}
@@ -410,8 +499,6 @@ I_{3}=2I=\frac{\mu_{n}C_{ox}}{2}\frac{W}{L}(V_{GS3}-V_{TH})^{2}=\alpha(V_{GS3}-V
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 I=\frac{2R_{2}V_{CC}\alpha-2R_{2}V_{TH}\alpha+1\pm\sqrt{4R_{2}V_{CC}\alpha-4R_{2}V_{TH}\alpha+1}}{4R_{2}^{2}\alpha}
@@ -424,33 +511,31 @@ I=\frac{2R_{2}V_{CC}\alpha-2R_{2}V_{TH}\alpha+1\pm\sqrt{4R_{2}V_{CC}\alpha-4R_{2
 
 \begin_layout Standard
 Para poder realizar las cuentas se procede a comparar numéricamente con
- las mediciones, dado que no se puede predecir a priori el valor de V
-\begin_inset Formula $_{TH}$
+ las mediciones, dado que no se puede predecir a priori el valor que toma
+ 
+\begin_inset Formula $V_{TH}$
 \end_inset
 
-.
-\end_layout
+ para cada transistor real.
+ Sabemos que con 
+\begin_inset Formula $I$
+\end_inset
 
-\begin_layout Standard
-Sabemos que con I se puede calcular V
-\begin_inset Formula $_{GS3}$
+ se puede calcular 
+\begin_inset Formula $V_{GS3}$
 \end_inset
 
  y dado que se tienen dos valores, descartar uno de los dos mediante la
- ecuación V
-\begin_inset Formula $_{DS}$
+ suposición 
+\begin_inset Formula $V_{DS}>V{}_{GS}-V_{TH}$
 \end_inset
 
->V
-\begin_inset Formula $_{GS}-V_{TH}$
-\end_inset
-
-, podemos notar que siempre el que de mayor V
-\begin_inset Formula $_{GS}-V_{TH}$
+, podemos notar que siempre el que de mayor 
+\begin_inset Formula $V_{GS}-V_{TH}$
 \end_inset
 
  va a ser el correcto.
- Sabiendo esto, se obtienen los valores.
+ Sabiendo esto, se obtienen los valores:
 \end_layout
 
 \begin_layout Standard
@@ -465,8 +550,6 @@ V_{TH}=1.86V
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 I=0.496mA
@@ -478,8 +561,6 @@ I=0.496mA
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 V_{GS3}=2.07V
@@ -491,37 +572,36 @@ V_{GS3}=2.07V
 \end_layout
 
 \begin_layout Standard
-Ahora que se obtuvo V
-\begin_inset Formula $_{GS3}$
+Ahora que se obtuvo 
+\begin_inset Formula $V_{GS3}$
 \end_inset
 
- se puede obtener facilmente V
-\begin_inset Formula $_{GS2}$
+ se puede obtener fácilmente 
+\begin_inset Formula $V_{GS2}$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
-Para esta instancia utilizamos el V
-\begin_inset Formula $_{TH}$
+Para esta instancia utilizamos el 
+\begin_inset Formula $V_{TH}$
 \end_inset
 
  anterior y revisamos cuánto se desvía de lo medido, en caso de ser necesario
- se ha de tener que probar con otro V
-\begin_inset Formula $_{TH}$
+ se ha de tener que ajustar con otro 
+\begin_inset Formula $V_{TH}$
 \end_inset
 
- ya que, si bien sabemos que los transistores son distintos, puede que V
-\begin_inset Formula $_{TH}$
+ que se encuentre dentro del intervalo dado anteriormente ya que, si bien
+ sabemos que los transistores son físicamente distintos, puede que 
+\begin_inset Formula $V_{TH}$
 \end_inset
 
  sea parecido.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 \sqrt{\frac{I}{\alpha}}=|V_{GS2}-V_{TH}|
@@ -533,11 +613,9 @@ Para esta instancia utilizamos el V
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
-0.15=|V_{GS2}-V_{TH}|
+0.15V=|V_{GS2}-V_{TH}|
 \]
 
 \end_inset
@@ -546,11 +624,9 @@ Para esta instancia utilizamos el V
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
-V_{GS2}-V_{TH}=\pm0.15
+V_{GS2}-V_{TH}=\pm0.15V
 \]
 
 \end_inset
@@ -559,7 +635,7 @@ V_{GS2}-V_{TH}=\pm0.15
 \end_layout
 
 \begin_layout Standard
-Por la misma razón de antes elegimos la que da +0.15, luego:
+Por la misma razón de antes elegimos la que da +0.15V, luego:
 \end_layout
 
 \begin_layout Standard
@@ -574,8 +650,6 @@ V_{GS2}=2.01V
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 V_{DS3}=V_{CC}-2I.R_{2}-V_{GS2}=0.07V
@@ -587,8 +661,6 @@ V_{DS3}=V_{CC}-2I.R_{2}-V_{GS2}=0.07V
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 V_{DS1}=2V_{CC}-V_{DS3}-2I.R_{2}=14.07V
@@ -600,8 +672,6 @@ V_{DS1}=2V_{CC}-V_{DS3}-2I.R_{2}=14.07V
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 V_{DS2}=2V_{CC}-I.R1-2I.R_{2}-V_{DS3}=10.637V
@@ -613,14 +683,10 @@ V_{DS2}=2V_{CC}-I.R1-2I.R_{2}-V_{DS3}=10.637V
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Análogamente con las siguientes ecuaciones
+Análogamente con las siguientes ecuaciones:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 V_{GS4}=V_{CC}-I.R_{1}-I_{4}(R_{3}//R_{L})\approx V_{A}-I_{4}R_{L}
@@ -632,8 +698,6 @@ V_{GS4}=V_{CC}-I.R_{1}-I_{4}(R_{3}//R_{L})\approx V_{A}-I_{4}R_{L}
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 V_{A}=V_{CC}-I.R_{1}=8.627V
@@ -645,8 +709,6 @@ V_{A}=V_{CC}-I.R_{1}=8.627V
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
 I_{4}=\alpha(V_{GS4}-V_{TH})^{2}
@@ -658,21 +720,17 @@ I_{4}=\alpha(V_{GS4}-V_{TH})^{2}
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Se obtiene que I
-\begin_inset Formula $_{4}$
+Se obtiene que 
+\begin_inset Formula $I_{4}$
 \end_inset
 
-
+:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula 
 \[
-I_{4}=\frac{4400V_{A}\alpha(V_{A}-V_{TH})\pm\sqrt{(8800\alpha(V_{A}-V_{TH})+1}}{9680000\alpha})
+I_{4}=\frac{4400V_{A}\alpha(V_{A}-V_{TH})\pm\sqrt{(8800\alpha(V_{A}-V_{TH})+1}}{9680000\alpha}
 \]
 
 \end_inset
@@ -681,26 +739,36 @@ I_{4}=\frac{4400V_{A}\alpha(V_{A}-V_{TH})\pm\sqrt{(8800\alpha(V_{A}-V_{TH})+1}}{
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Como en este caso con el V
-\begin_inset Formula $_{TH}$
+Como en este caso con el 
+\begin_inset Formula $V_{TH}$
 \end_inset
 
- que acarreabamos daba muy distinto se procede a averiguar cuánto es el
- V
-\begin_inset Formula $_{TH}$
+ que se acarreaba daba muy distinto se procede a averiguar cuánto es el
+ 
+\begin_inset Formula $V_{TH}$
 \end_inset
 
- del transistor Q4.
+ del transistor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_4$
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-El valor que se correspondía con las mediciones es V
-\begin_inset Formula $_{TH4}$
+El valor que más se correspondía con las mediciones es 
+\begin_inset Formula $V_{TH4}=0.96V$
 \end_inset
 
-=0.96V
+ (que se encuentra dentro del intervalo garantizado por el fabricante).
+ Con esto último, resulta:
 \end_layout
 
 \begin_layout Standard
@@ -726,14 +794,118 @@ I_{4}=3.3mA
 \end_layout
 
 \begin_layout Subsection
+Modelo incremental
+\end_layout
 
-\lang english
+\begin_layout Standard
+Considerando el modelo del transistor MOS para señales débiles y frecuencias
+ medias:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#MODELO#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modelo incremental
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los parámetros son calculados mediante las ecuaciones:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_{DS} = 
+\backslash
+frac{V_A}{I_D}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$gm = 
+\backslash
+sqrt{2 
+\backslash
+cdot K'n 
+\backslash
+cdot 
+\backslash
+frac{W}{L} 
+\backslash
+cdot I_D} = 
+\backslash
+sqrt{4 
+\backslash
+cdot 
+\backslash
+alpha 
+\backslash
+cdot I_D}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_A$
+\end_layout
+
+\end_inset
+
+ es la tensión de Early del transistor.
+\end_layout
+
+\begin_layout Subsection
 Circuito incremental
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 wide false
 sideways false
@@ -752,13 +924,9 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang english
 Circuito incremental
 \end_layout
 
@@ -769,24 +937,6 @@ Circuito incremental
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-newpage
 \end_layout
 
 \end_inset
@@ -1147,9 +1297,7 @@ $AI =
 \backslash
 frac{I_O}{I_I} = 
 \backslash
-frac{630uAp}{714nAp} = 882.3
-\backslash
-Omega$
+frac{630uAp}{714nAp} = 882.3$
 \end_layout
 
 \end_inset
