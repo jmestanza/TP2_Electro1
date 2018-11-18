@@ -86,6 +86,31 @@
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Circuito utilizado
 \end_layout
@@ -552,7 +577,7 @@ V_{TH}=1.86V
 \begin_layout Standard
 \begin_inset Formula 
 \[
-I=0.496mA
+I=0.5mA
 \]
 
 \end_inset
@@ -578,6 +603,10 @@ Ahora que se obtuvo
 
  se puede obtener fácilmente 
 \begin_inset Formula $V_{GS2}$
+\end_inset
+
+, que es aproximadamente igual a 
+\begin_inset Formula $V_{GS1}$
 \end_inset
 
 .
@@ -635,6 +664,22 @@ V_{GS2}-V_{TH}=\pm0.15V
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Por la misma razón de antes elegimos la que da +0.15V, luego:
 \end_layout
 
@@ -674,7 +719,7 @@ V_{DS1}=2V_{CC}-V_{DS3}-2I.R_{2}=14.07V
 \begin_layout Standard
 \begin_inset Formula 
 \[
-V_{DS2}=2V_{CC}-I.R1-2I.R_{2}-V_{DS3}=10.637V
+V_{DS2}=2V_{CC}-I.R1-2I.R_{2}-V_{DS3}=10.64V
 \]
 
 \end_inset
@@ -700,7 +745,7 @@ V_{GS4}=V_{CC}-I.R_{1}-I_{4}(R_{3}//R_{L})\approx V_{A}-I_{4}R_{L}
 \begin_layout Standard
 \begin_inset Formula 
 \[
-V_{A}=V_{CC}-I.R_{1}=8.627V
+V_{A}=V_{CC}-I.R_{1}=8.63V
 \]
 
 \end_inset
@@ -774,7 +819,7 @@ El valor que más se correspondía con las mediciones es
 \begin_layout Standard
 \begin_inset Formula 
 \[
-V_{GS4}=1.3478V
+V_{GS4}=1.35V
 \]
 
 \end_inset
@@ -791,6 +836,41 @@ I_{4}=3.3mA
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Por lo que recorriendo la malla de salida de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_4$
+\end_layout
+
+\end_inset
+
+ se obtiene 
+\begin_inset Formula $V_{DS4}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+12V-I_{4}(R_{3}//R_{L})=V_{DS4}=4.76V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se realizará luego un contraste de los valores de polarización teóricos
+ con los medidos mediante un cuadro.
 \end_layout
 
 \begin_layout Subsection
@@ -810,7 +890,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#MODELO#
+\begin_inset Graphics
+	filename Graficos/Modelo.png
+	display false
+	scale 60
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -827,6 +914,22 @@ Modelo incremental
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
 \end_layout
 
 \end_inset
@@ -899,10 +1002,284 @@ $V_A$
 \end_inset
 
  es la tensión de Early del transistor.
+ Dado que no se dispone de dicho valor de las hojas de datos, de todas formas
+ se considerará que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{DS}$
+\end_layout
+
+\end_inset
+
+ es lo suficientemente grande para despreciarla como una primera aproximación.
+ Teniendo esto en cuenta, se calcula el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$gm$
+\end_layout
+
+\end_inset
+
+ para cada transistor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_1$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_2$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_3$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_4$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$gm$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$6.6 
+\backslash
+cdot 
+\backslash
+frac{mA}{V}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$6.6 
+\backslash
+cdot 
+\backslash
+frac{mA}{V}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$9.3 
+\backslash
+cdot 
+\backslash
+frac{mA}{V}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$17 
+\backslash
+cdot 
+\backslash
+frac{mA}{V}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros del modelo incremental
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Circuito incremental
+Circuito incremental - Análisis
+\end_layout
+
+\begin_layout Standard
+Reemplazando por el modelo incremental en cada transistor y pasivando las
+ fuentes de continua, resulta:
 \end_layout
 
 \begin_layout Standard
@@ -914,9 +1291,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename incremental.png
+	filename Graficos/Incremental1.png
 	display false
-	scale 80
+	scale 40
 
 \end_inset
 
@@ -944,48 +1321,174 @@ Circuito incremental
 
 \end_layout
 
-\begin_layout Section
-Simulación
-\end_layout
-
 \begin_layout Standard
-Se simuló el circuito propuesto en LTSpice, utilizando un modelo adecuado
- del transistor implementado.
- En todos los casos se utilizó como señal de entrada una senoidal de 
+Dado que la disposición de 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$100mVp$
+$V_{GS1}$
 \end_layout
 
 \end_inset
 
- a una frecuencia de 
+ y 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$3KHz$
+$V_{GS4}$
 \end_layout
 
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Subsection
-Ganancia de tensión AV
-\end_layout
-
-\begin_layout Standard
-Con dicha señal de entrada se obtiene a la salida la forma de onda que se
- muestra a continuación.
+ no es la más cómoda para los cálculos, se trabaja con los correspondientes
+ generadores dependientes para cambiar la referencia de dichas tensiones,
+ de forma que (en general):
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$gm 
+\backslash
+cdot V_{GS} = gm 
+\backslash
+cdot (V_G - V_S) = gm 
+\backslash
+cdot V_G - gm 
+\backslash
+cdot V_S$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde si se hace el cociente entre la tensión 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_S$
+\end_layout
+
+\end_inset
+
+ sobre el generador 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$gm 
+\backslash
+cdot V_S$
+\end_layout
+
+\end_inset
+
+ y la corriente misma, resulta una impedancia:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_S}{gm 
+\backslash
+cdot V_S} = 
+\backslash
+frac{1}{gm}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la rama con el generador 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$gm_3 
+\backslash
+cdot V_{GS3}$
+\end_layout
+
+\end_inset
+
+ dado que éste depende de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{GS3}$
+\end_layout
+
+\end_inset
+
+, al no recibir corriente por otro nodo queda abierta.
+ Por otro lado, se invierte el sentido de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{GS2}$
+\end_layout
+
+\end_inset
+
+ como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{SG2}$
+\end_layout
+
+\end_inset
+
+ para que se encuentre referida a GND.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con los reemplazos anteriores, el circuito resultante es:
 \begin_inset Float figure
 wide false
 sideways false
@@ -994,9 +1497,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename salidaVO.pdf
+	filename Graficos/Incremental2.png
 	display false
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -1007,18 +1510,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Señal de salida 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$V_O$
-\end_layout
-
-\end_inset
-
-
+Circuito incremental simplificado
 \end_layout
 
 \end_inset
@@ -1036,20 +1528,103 @@ $V_O$
 \end_layout
 
 \begin_layout Standard
-De donde se obtiene que la tensión pico de la señal sin el nivel continua
- es de 
+Sabiendo que:
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$2.75Vp$
+$$V_{SG2} = (gm_2 
+\backslash
+cdot V_{SG2} - gm_1 
+\backslash
+cdot V_{G1})
+\backslash
+frac{1}{gm_1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$gm_1 = gm_2$
+\end_layout
+
+\end_inset
+
+, y como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{G1} = V_S 
+\backslash
+neq 0$
+\end_layout
+
+\end_inset
+
+, resulta que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{SG2} = V_{G1}$
+\end_layout
+
+\end_inset
+
+, por lo que no se deriva corriente por la impedancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{1}{gm_1}$
 \end_layout
 
 \end_inset
 
 .
- Por lo que calculando la ganancia de tensión simulada resulta:
+ Con estos datos se calculan ahora los parámetros característicos.
+\end_layout
+
+\begin_layout Subsection
+Ganancia de tensión 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$AV$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Total
+\end_layout
+
+\begin_layout Standard
+Para la ganancia de tensión:
 \end_layout
 
 \begin_layout Standard
@@ -1062,45 +1637,214 @@ $$AV =
 \backslash
 frac{V_O}{V_I} = 
 \backslash
-frac{2.75V}{100mV} = 27.5$$
+frac{-gm_4 
+\backslash
+cdot V_{G4} 
+\backslash
+cdot (
+\backslash
+frac{1}{gm_4} // R_3 // R_L)}{V_{G1}} = 
+\backslash
+frac{gm_4 
+\backslash
+cdot gm_2 
+\backslash
+cdot V_{G1} 
+\backslash
+cdot R_1 
+\backslash
+cdot (
+\backslash
+frac{1}{gm_4} // R_3 // R_L)}{V_{G1}}$$
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$AV = gm_4 
+\backslash
+cdot gm_2 
+\backslash
+cdot R_1 
+\backslash
+cdot 
+\backslash
+left(
+\backslash
+frac{1}{gm_4} // R_3 // R_L
+\backslash
+right) = 43$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Etapa diferencial
+\end_layout
+
+\begin_layout Standard
+Tomando la salida de la etapa diferencial en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{G4}$
+\end_layout
+
+\end_inset
+
+, se calcula la ganancia teórica de dicha etapa por separado:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$AV_D = 
+\backslash
+frac{V_{G4}}{V_I} = 
+\backslash
+frac{-gm_2 
+\backslash
+cdot R_1 
+\backslash
+cdot V_{G1}}{V_{G1}} = -gm_2 
+\backslash
+cdot R_1 = 44.8$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Etapa Drain Común
+\end_layout
+
+\begin_layout Standard
+Y considerando sólo la etapa de salida 
+\begin_inset Quotes fld
+\end_inset
+
+Drain Común
+\begin_inset Quotes frd
+\end_inset
+
+, cuya entrada es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{G4}$
+\end_layout
+
+\end_inset
+
+ y salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_O$
+\end_layout
+
+\end_inset
+
+, resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$AV_{DC} = 
+\backslash
+frac{V_O}{V_{G4}} = 
+\backslash
+frac{gm_4 
+\backslash
+cdot V_{G4} 
+\backslash
+cdot (
+\backslash
+frac{1}{gm_4} // R_3 // R_L)}{V_{G4}} = gm_4 
+\backslash
+cdot (
+\backslash
+frac{1}{gm_4} // R_3 // R_L) = 0.98$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo cual es consistente para una etapa con dicha configuración (al igual
+ que un colector común con BJT, la ganancia de tensión 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$AV$
+\end_layout
+
+\end_inset
+
+ debe ser menor a 1).
 \end_layout
 
 \begin_layout Subsection
-Ganancia de corriente AI
-\end_layout
-
-\begin_layout Standard
-Para la ganancia de corriente, se mide la corriente a la entrada del circuito
- (que resulta muy pequeña dado que es el GATE de un transistor MOS) obteniendo
- 
+Ganancia de corriente 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$I_{Ip} = 8nA$
+$AI$
 \end_layout
 
 \end_inset
 
-, y se mide la corriente a la salida, obteniendo 
+
+\end_layout
+
+\begin_layout Standard
+Dado que la corriente de entrada es 0, y la de salida está definida por
+ la fuente de corriente 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$I_{Op} = 1.2mA$
+$gm_4 
+\backslash
+cdot V_{G4}$
 \end_layout
 
 \end_inset
 
- (sin el nivel de continua).
- Por lo que calculando la ganancia de corriente simualda resulta:
+, resulta idealmente:
 \end_layout
 
 \begin_layout Standard
@@ -1109,11 +1853,11 @@ status open
 
 \begin_layout Plain Layout
 
-$$AI = 
+$$AI 
 \backslash
-frac{I_O}{I_I} = 
+rightarrow 
 \backslash
-frac{1.2mAp}{8nAp} = 150000$$
+infty$$
 \end_layout
 
 \end_inset
@@ -1137,7 +1881,8 @@ $R_I$
 \end_layout
 
 \begin_layout Standard
-Para la impedancia de entrada, se calcula como:
+Para la impedancia de entrada, teniendo en cuenta también como antes que
+ la corriente de entrada es 0, resulta:
 \end_layout
 
 \begin_layout Standard
@@ -1146,13 +1891,11 @@ status open
 
 \begin_layout Plain Layout
 
-$R_I = 
+$$R_I 
 \backslash
-frac{V_I}{I_I} = 
+rightarrow 
 \backslash
-frac{100mVp}{8nAp} = 12.5M
-\backslash
-Omega$
+infty$$
 \end_layout
 
 \end_inset
@@ -1176,10 +1919,250 @@ $R_O$
 \end_layout
 
 \begin_layout Standard
-Para la impedancia de salida, solamente se muestra la obtenida en forma
- simualda, dado que resulta muy pequeña y no pudo ser medida.
- Pasivando el generador de la entrada, sacando la carga y conectando un
- generador de prueba 
+Finalmente, la impedancia de salida al pasivar el generador de entrada,
+ resulta el conjunto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_O = 
+\backslash
+left( 
+\backslash
+frac{1}{gm_4} // R_3 // R_L 
+\backslash
+right) = 57
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Simulación
+\end_layout
+
+\begin_layout Standard
+Se simuló el circuito propuesto en LTSpice, utilizando un modelo adecuado
+ del transistor implementado.
+ Dado que el análisis incremental realizado es válido para señales débiles
+ a frecuencias medias, en todos los casos se utilizó la respuesta en frecuencia
+ del circuito, tomando la ganancia de frecuencias medias.
+\end_layout
+
+\begin_layout Subsection
+Ganancia de tensión 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$AV$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Total
+\end_layout
+
+\begin_layout Standard
+Mediante el análisis en frecuencia, el diagrama obtenido se muestra a continuaci
+ón (luego se buscará superponerlo con el medido).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/BodeModuloSimple.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia simulada - Módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De donde se obtiene que la ganancia para frecuencias medias en la banda
+ de paso resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$AV[dB] = 29.8 
+\backslash
+longrightarrow AV = 30.9$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Etapa diferencial
+\end_layout
+
+\begin_layout Standard
+Tomando la relación entre la entrada y la salida de la etapa diferencial
+ para frecuencias medias, desacoplandola de la etapa Drain Común, se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$AV_D[dB] = 30  
+\backslash
+longrightarrow AV_D = 31.6$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Etapa Drain Común
+\end_layout
+
+\begin_layout Standard
+Separando ahora la etapa en cuestión, tomando la relación entre entrada
+ y salida para frecuencias medias, se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$AV_{DC}[dB] =  -0.17 
+\backslash
+longrightarrow AV_{DC} = 0.98$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ganancia de corriente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$AI$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para la ganancia de corriente, #VER QUE PONER#
+\end_layout
+
+\begin_layout Subsection
+Impedancia de entrada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_I$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para la impedancia de entrada, #VER QUE PONER#
+\end_layout
+
+\begin_layout Subsection
+Impedancia de salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_O$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para la impedancia de salida, se pasiva el generador de la entrada, sacando
+ la carga y conectando un generador de prueba 
 \begin_inset ERT
 status open
 
@@ -1190,7 +2173,7 @@ $V_{op}$
 
 \end_inset
 
- y se mide la corriente que circula, obteniendo:
+ y midiendo la corriente que circula, se obtiene:
 \end_layout
 
 \begin_layout Standard
@@ -1199,13 +2182,13 @@ status open
 
 \begin_layout Plain Layout
 
-$R_O = 
+$$R_O = 
 \backslash
 frac{V_{op}}{I_{op}} = 
 \backslash
 frac{1Vp}{0.3Ap} = 3.3
 \backslash
-Omega$
+Omega$$
 \end_layout
 
 \end_inset
@@ -1218,7 +2201,817 @@ Mediciones
 \end_layout
 
 \begin_layout Subsection
-Ganancia de tensión AV
+Polarización
+\end_layout
+
+\begin_layout Standard
+Como se mencionó en la sección de cálculos, para ajustar algunos valores
+ se debió armar el circuito y medir los puntos de polarización prácticos,
+ de forma tal de poder definir la 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{TH}$
+\end_layout
+
+\end_inset
+
+ para cada transistor real.
+ En el siguiente cuadro se comparan los valores medidos con los calculados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="9">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_1$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_2$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_3$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_4$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Teórico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Medido
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Teórico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Medido
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Teórico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Medido
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Teórico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Medido
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{DS}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$14.07V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$13.96V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10.64V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$11.3V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.07V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$4.76V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$4.01V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{GS}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.01V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.05V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.01V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.14V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.07$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.06V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1.35V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1.35V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$I_D$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.5mA$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.58mA$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.5mA$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.42mA$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1mA$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1mA$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3.30mA$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3.58mA$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Polarización
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ganancia de tensión 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$AV$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Total
 \end_layout
 
 \begin_layout Standard
@@ -1233,7 +3026,110 @@ $100mVp$
 
 \end_inset
 
- a una frecuencia de 
+ (dado que, como se mencionó anteriormente el análisis se realiza para señales
+ débiles), se realiza un barrido en frecuencias desde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.5Hz$
+\end_layout
+
+\end_inset
+
+ hasta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$900KHz$
+\end_layout
+
+\end_inset
+
+, de manera tal de contrastar la respuesta en frecuencia obtenida con la
+ simulada, además de obtener la ganancia para frecuencias medias, obteniendo
+ los siguientes diagramas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/BodeModulo.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia - Módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De las mediciones obtenidas resulta que para frecuencias medias:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$AV[dB] = 22.9 
+\backslash
+longrightarrow AV = 13.9$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Etapa diferencial
+\end_layout
+
+\begin_layout Standard
+Conectando a la entrada del circuito una señal de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100mVp$
+\end_layout
+
+\end_inset
+
+ a 
 \begin_inset ERT
 status open
 
@@ -1244,7 +3140,59 @@ $3KHz$
 
 \end_inset
 
-, se midió la tensión de salida sobre la carga, obteniendo:
+ (correspondiente para el análisis de señales débiles) se midió a la salida
+ del par diferencial con el osciloscopio, obteniendo las siguientes formas
+ de onda.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/OutDiferencial.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Etapa diferencial
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De donde se obtiene una señal de salida de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1.51Vp$
+\end_layout
+
+\end_inset
+
+, por lo que la ganancia de la etapa diferencial resulta:
 \end_layout
 
 \begin_layout Standard
@@ -1253,11 +3201,11 @@ status open
 
 \begin_layout Plain Layout
 
-$$AV = 
+$AV_D = 
 \backslash
-frac{V_O}{V_I} = 
+frac{V_OD}{V_I} = 
 \backslash
-frac{1.38Vp}{99.7mVp} = 13.8$$
+frac{1.51V}{100mVp} = 15.1$
 \end_layout
 
 \end_inset
@@ -1265,8 +3213,110 @@ frac{1.38Vp}{99.7mVp} = 13.8$$
 
 \end_layout
 
+\begin_layout Subsubsection
+Etapa Drain Común
+\end_layout
+
+\begin_layout Standard
+Para esta etapa, se realiza el mismo procedimiento anterior, conectando
+ a la entrada del circuito una señal de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100mVp$
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3KHz$
+\end_layout
+
+\end_inset
+
+, midiendo la salida de la etapa con el osciloscopio, obteniendo las formas
+ de onda siguientes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#LO QUE MIDA EL MARTES#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Etapa Drain Común
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De donde tomando las amplitudes de salida y entrada se obtiene la ganancia
+ de tensión:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$AV_{DC} = 
+\backslash
+frac{V_O}{V_{IDC}} = 
+\backslash
+frac{}{100mVp} = XX$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que resulta menor a 1, lo cual es consistente con el tipo de etapa.
+\end_layout
+
 \begin_layout Subsection
-Ganancia de corriente AI
+Ganancia de corriente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$AI$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1293,11 +3343,11 @@ status open
 
 \begin_layout Plain Layout
 
-$AI = 
+$$AI = 
 \backslash
 frac{I_O}{I_I} = 
 \backslash
-frac{630uAp}{714nAp} = 882.3$
+frac{630uAp}{714nAp} = 882.3$$
 \end_layout
 
 \end_inset
@@ -1312,12 +3362,16 @@ status open
 
 \begin_layout Plain Layout
 
-$R_{I}$
+$R_I$
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+#VER TAMBIEN LO DE LA CORRIENTE
 \end_layout
 
 \begin_layout Standard
@@ -1331,18 +3385,146 @@ status open
 
 \begin_layout Plain Layout
 
-$R_I = 
+$$R_I = 
 \backslash
 frac{V_I}{I_I} = 
 \backslash
 frac{99.7mVp}{714nAp} = 140K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Impedancia de salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_O$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pasivando la entrada de señal, en la salida se retira la carga y se coloca
+ una resistencia de bajo valor (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10
 \backslash
 Omega$
 \end_layout
 
 \end_inset
 
+, teniendo en cuenta que de acuerdo a los valores calculados y simulados
+ debe estar dentro de ese orden), y se inyecta una señal de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100mVp$
+\end_layout
+
+\end_inset
+
+ por dicha salida, midiendo la diferencia de tensiones entre bornes de la
+ resistencia para poder calcular la corriente, de manera tal que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_O = 
+\backslash
+frac{V_{OP}}{I_{OP}} = 
+\backslash
+frac{100mVp}{500uA} = 200
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diseño del amplificador en PCB
+\end_layout
+
+\begin_layout Standard
+Para el desarrollo en PCB se utilizó el software Altium, implementando el
+ circuito impreso en la placa asignada de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5cm 
+\backslash
+times 5cm$
+\end_layout
+
+\end_inset
+
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#GRAFICO DE ALTIUM#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Vista 3D
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusiones generales
+\end_layout
+
+\begin_layout Standard
+##VER
 \end_layout
 
 \end_body
