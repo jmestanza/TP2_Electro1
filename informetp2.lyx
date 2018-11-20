@@ -3292,7 +3292,7 @@ $AV_{DC} =
 \backslash
 frac{V_O}{V_{IDC}} = 
 \backslash
-frac{}{100mVp} = XX$
+frac{104mVp}{106mVp} = 0.98$
 \end_layout
 
 \end_inset

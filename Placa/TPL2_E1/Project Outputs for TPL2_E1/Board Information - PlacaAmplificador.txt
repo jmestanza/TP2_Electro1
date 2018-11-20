@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : C:\Users\joa-m\TP2_Electro1\Placa\TPL2_E1\PlacaAmplificador.PcbDoc
+Date         : 20/11/2018
+Time         : 10:19:48
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100,00%
+    Connections, 29
+    Connections routed, 29
+    Connections remaining, 0
+count : 4
