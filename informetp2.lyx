@@ -2123,7 +2123,28 @@ $AI$
 \end_layout
 
 \begin_layout Standard
-Para la ganancia de corriente, #VER QUE PONER#
+Para la ganancia de corriente, se mide la corriente sobre la carga y la
+ corriente de entrada, que idealmente es 0, en el análisis incremental al
+ ser variable la tensión de entrada, la tensión en el capacitor en GATE
+ es variable y produce una muy pequeña corriente, de manera tal que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$AI = 
+\backslash
+frac{I_O}{I_I} = 
+\backslash
+frac{4.07mAp}{25nAp} = 162800$$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2142,7 +2163,32 @@ $R_I$
 \end_layout
 
 \begin_layout Standard
-Para la impedancia de entrada, #VER QUE PONER#
+Para la impedancia de entrada, teniendo en cuenta la corriente de entrada
+ anterior, resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_I = 
+\backslash
+frac{V_I}{I_I} = 
+\backslash
+frac{100mVp}{25nAp} = 4M
+\backslash
+Omega 
+\backslash
+approx 
+\backslash
+infty$$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2189,6 +2235,22 @@ frac{V_{op}}{I_{op}} =
 frac{1Vp}{0.3Ap} = 3.3
 \backslash
 Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
 \end_layout
 
 \end_inset
@@ -3156,7 +3218,7 @@ status open
 \begin_inset Graphics
 	filename Graficos/OutDiferencial.pdf
 	display false
-	scale 50
+	scale 35
 
 \end_inset
 
@@ -3253,7 +3315,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#LO QUE MIDA EL MARTES#
+\begin_inset Graphics
+	filename Graficos/OutDrainComun.pdf
+	display false
+	scale 35
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3278,6 +3347,22 @@ Etapa Drain Común
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 De donde tomando las amplitudes de salida y entrada se obtiene la ganancia
  de tensión:
 \end_layout
@@ -3288,11 +3373,11 @@ status open
 
 \begin_layout Plain Layout
 
-$AV_{DC} = 
+$$AV_{DC} = 
 \backslash
 frac{V_O}{V_{IDC}} = 
 \backslash
-frac{104mVp}{106mVp} = 0.98$
+frac{104mVp}{106mVp} = 0.98$$
 \end_layout
 
 \end_inset
@@ -3320,10 +3405,6 @@ $AI$
 \end_layout
 
 \begin_layout Standard
-#MISMO TEMA CORRIENTE DE ENTRADA NO NULA
-\end_layout
-
-\begin_layout Standard
 Para la ganancia de corriente, se midió la diferencia de tensiones sobre
  la resistencia de 
 \begin_inset ERT
@@ -3338,7 +3419,9 @@ Omega$
 
 \end_inset
 
- fija, obteniendo:
+ fija para calculara la corriente de entrada (que como ya se mencionó en
+ la sección de Simulación ésta no es 0 dado que a la entrada de GATE hay
+ presente un capacitor):
 \end_layout
 
 \begin_layout Standard
@@ -3372,10 +3455,6 @@ $R_I$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-#VER TAMBIEN LO DE LA CORRIENTE
 \end_layout
 
 \begin_layout Standard
@@ -3469,6 +3548,22 @@ Omega$$
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Diseño del amplificador en PCB
 \end_layout
@@ -3499,7 +3594,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#GRAFICO DE ALTIUM#
+\begin_inset Graphics
+	filename Graficos/Modelo3D.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3528,7 +3630,93 @@ Conclusiones generales
 \end_layout
 
 \begin_layout Standard
-##VER
+En base al amplificador realizado, se resaltan algunos puntos sobre la implement
+ación final:
+\end_layout
+
+\begin_layout Itemize
+Para el diseño del circuito, dados que los valores de resistencias disponibles
+ no eran los más adecuados, por lo que para poder polarizar el circuito
+ se debió dejar la carga 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_L$
+\end_layout
+
+\end_inset
+
+ sin capacitor de desacople, por lo que la señal de salida se encuentra
+ montada sobre una continua (por ello la excursión máxima no es simétrica).
+\end_layout
+
+\begin_layout Itemize
+Al no ser físicamente idénticos los transistores, las tensiones de threshold
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(V_{TH})$
+\end_layout
+
+\end_inset
+
+ son considerablemente diferentenes entre los cuatro utilizados, por lo
+ que las corrientes de ambos transistores 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_1$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_2$
+\end_layout
+
+\end_inset
+
+ del par diferencial resultaron un poco diferentes (sumado a que se dispone
+ de resistencia de Drain en sólo uno de ellos), rompiendo la simetría y
+ disminuyendo la ganancia de tensión final.
+ Esto puede mejorarse si se miden los transistores por separado, y elegir
+ los que tengan tensiones 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{TH}$
+\end_layout
+
+\end_inset
+
+ parecidas.
+\end_layout
+
+\begin_layout Itemize
+En las hojas de datos de los transistores, se especifica una corriente máxima
+ de fuga de los capacitores de GATE, lo cual es consistente con la corriente
+ incremental no nula obtenida en la simulación y las mediciones al momento
+ de calcular la ganancia de corriente y la impedancia de entrada.
+ Ambas son, de todas formas, bastante grandes.
+\end_layout
+
+\begin_layout Itemize
+La mejor característica que se considera que posee el circuito es la alta
+ impedancia de entrada que presenta y baja impedancia de salida.
 \end_layout
 
 \end_body
